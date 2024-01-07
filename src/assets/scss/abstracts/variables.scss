@@ -1,0 +1,46 @@
+// Colors
+$white: #fff;
+$black: #000;
+$your-pink: #ffbcbc;
+$casper: #aabad0;
+
+$color-background: $white;
+$color-text: $black;
+$color-button: $your-pink;
+$color-bg-accent: $casper;
+$color-footer: $casper;
+$color-footer: $casper;
+
+// Fonts
+$font-size-base: 18px;
+
+$font-size-tiny: 12px;
+$font-size-small: 17px;
+$font-size-normal: 20px;
+$font-size-big: 70px;
+$font-size-large: 84px;
+
+$fz-header-nav: 22px;
+$fz-footer-nav-title: $font-size-normal;
+$fz-lead: $font-size-large;
+$fz-section-title: $font-size-big;
+$fz-product-name: $font-size-normal;
+$fz-footer-caption: $font-size-tiny;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$font-family-custom: "Roboto";
+$font-family-default: "Arial", "Helvetica", sans-serif;
+
+$font-family: $font-family-custom, $font-family-default;
+$font-path: '~@/assets/fonts';
+
+// Layout
+$container-width-desktop: 1440px;
+$gap-container: 20px;
+
+// Sizes 
+$icon-size: 30px;
+
+$border: 2px solid $black;
