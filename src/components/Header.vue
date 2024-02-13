@@ -9,9 +9,7 @@
           <Menu :links="links" :placement="'header'" />
         </div>
         <div class="header__col header__col--link">
-          <RouterLink to="#" class="header__link">{{
-            customerLinkText
-          }}</RouterLink>
+          <RouterLink to="#" class="header__link">{{ customerLinkText }}</RouterLink>
         </div>
       </div>
     </div>
