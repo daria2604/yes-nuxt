@@ -41,13 +41,23 @@
           <div class="footer__row footer__row--contacts">
             <div class="footer__row footer__row--socials">
               <p class="footer__text">We are always close</p>
-              <div class="footer__socials"></div>
+              <div class="footer__socials">
+                <Socials />
+              </div>
             </div>
             <div class="footer__row footer__row--connect">
-              <a :href="'tel:' + telephone" class="footer__link">{{
-                telephone
-              }}</a>
-              <a :href="'mailto:' + email" class="footer__link">{{ email }}</a>
+              <a
+                :href="'tel:' + telephone"
+                class="footer__link footer__link-contact"
+              >
+                {{ telephone }}
+              </a>
+              <a
+                :href="'mailto:' + email"
+                class="footer__link footer__link-contact"
+              >
+                {{ email }}
+              </a>
             </div>
           </div>
         </div>
@@ -56,61 +66,54 @@
   </footer>
 </template>
 
-<script>
+<script setup>
 import Logo from './Logo.vue';
 import Menu from './Menu.vue';
+import Socials from './Socials.vue';
 
-export default {
-  name: 'Footer',
-  components: { Logo, Menu },
-  data() {
-    return {
-      links: [
-        {
-          heading: 'Shop',
-          names: [
-            {
-              name: 'Sun',
-            },
-            {
-              name: 'Optical',
-            },
-            {
-              name: 'Brands',
-            },
-          ],
-        },
-        {
-          heading: 'Customer care',
-          names: [
-            {
-              name: 'FAQ',
-            },
-            {
-              name: 'Shipping and returns',
-            },
-            {
-              name: 'Fit guide',
-            },
-          ],
-        },
-        {
-          heading: 'Info',
-          names: [
-            {
-              name: 'Terms and conditions',
-            },
-            {
-              name: 'Privacy policy',
-            },
-          ],
-        },
-      ],
-      telephone: '+31 657 485 73 26',
-      email: 'hello@yesforeyes.com',
-    };
+const links = ref([
+  {
+    heading: 'Shop',
+    names: [
+      {
+        name: 'Sun',
+      },
+      {
+        name: 'Optical',
+      },
+      {
+        name: 'Brands',
+      },
+    ],
   },
-};
+  {
+    heading: 'Customer care',
+    names: [
+      {
+        name: 'FAQ',
+      },
+      {
+        name: 'Shipping and returns',
+      },
+      {
+        name: 'Fit guide',
+      },
+    ],
+  },
+  {
+    heading: 'Info',
+    names: [
+      {
+        name: 'Terms and conditions',
+      },
+      {
+        name: 'Privacy policy',
+      },
+    ],
+  },
+]);
+const telephone = '+31 657 485 73 26';
+const email = 'hello@yesforeyes.com';
 </script>
 
 <style lang="scss" scoped>
@@ -171,6 +174,7 @@ export default {
     &--socials {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
 
       margin-bottom: 5px;
     }
@@ -179,6 +183,8 @@ export default {
       display: flex;
       flex-direction: column;
       row-gap: 5px;
+
+      width: fit-content;
     }
   }
 
@@ -212,6 +218,10 @@ export default {
     }
   }
 
+  &__socials {
+    margin-right: 12px;
+  }
+
   &__text {
     line-height: 1.5;
     text-wrap: pretty;
@@ -221,6 +231,14 @@ export default {
     text-decoration: none;
 
     cursor: pointer;
+
+    &-contact {
+      line-height: 1.5;
+
+      &:hover {
+        @include hover;
+      }
+    }
   }
 
   &__designer,

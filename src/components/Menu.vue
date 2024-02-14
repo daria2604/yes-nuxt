@@ -28,20 +28,17 @@
   </nav>
 </template>
 
-<script>
-export default {
-  name: 'Menu',
-  props: {
-    links: {
-      type: Object,
-      required: true,
-    },
-    placement: {
-      type: String,
-      required: true,
-    },
+<script setup name="Menu">
+defineProps({
+  links: {
+    type: Object,
+    required: true,
   },
-};
+  placement: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -52,6 +49,10 @@ export default {
 
   &__link {
     text-decoration: none;
+
+    &:hover {
+      @include hover;
+    }
   }
 
   &--header & {
@@ -74,13 +75,6 @@ export default {
 
       &:not(:last-of-type) {
         border-right: $border;
-      }
-    }
-
-    &__link {
-      &:hover {
-        transition: all 0.2s ease;
-        opacity: 0.7;
       }
     }
   }
@@ -117,6 +111,8 @@ export default {
 
     &__link {
       line-height: 1.5;
+
+      border-bottom: 2px solid transparent;
 
       &:not(:last-of-type) {
         margin-bottom: 10px;

@@ -16,30 +16,23 @@
   </header>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import Logo from './Logo.vue';
 import Menu from './Menu.vue';
 
-export default {
-  name: 'Header',
-  components: { Logo, Menu },
-  data() {
-    return {
-      links: [
-        {
-          name: 'Sun',
-        },
-        {
-          name: 'Optical',
-        },
-        {
-          name: 'Fit guide',
-        },
-      ],
-      customerLinkText: 'Customer care',
-    };
+const links = ref([
+  {
+    name: 'Sun',
   },
-};
+  {
+    name: 'Optical',
+  },
+  {
+    name: 'Fit guide',
+  },
+]);
+const customerLinkText = 'Customer care';
 </script>
 
 <style lang="scss">

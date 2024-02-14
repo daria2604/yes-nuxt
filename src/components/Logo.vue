@@ -6,16 +6,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Logo',
-  props: {
-    placement: {
+<script setup>
+defineProps({
+  placement: {
       type: String,
       required: true,
     }
-  }
-};
+});
 </script>
 
 <style lang="scss" scoped>
