@@ -1,5 +1,5 @@
 <template>
-  <div class="lead">
+  <section class="lead">
     <div class="lead__intro">
       <h1 class="lead__heading">We treat your eyes with care</h1>
       <a href="#" class="lead__link">
@@ -14,7 +14,7 @@
         class="lead__image-pic"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup name="Lead">
