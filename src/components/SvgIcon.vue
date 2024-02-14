@@ -30,5 +30,10 @@ defineProps({
       @include hover;
     }
   }
+
+  &-arrow svg {
+    width: 53px;
+    height: 15px;
+  }
 }
 </style>

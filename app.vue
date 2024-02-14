@@ -1,22 +1,17 @@
 <template>
   <div class="page">
     <Header />
-    <slot />
+    <Main>
+      <NuxtPage />
+    </Main>
     <Footer />
   </div>
-  <NuxtPage />
 </template>
 
-<script>
+<script setup>
 import Header from '@/src/components/Header.vue';
 import Footer from '@/src/components/Footer.vue';
-
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-};
+import Main from '@/src/components/Main.vue';
 </script>
 
 <style lang="scss">
