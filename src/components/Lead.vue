@@ -24,8 +24,7 @@ import SvgIcon from './SvgIcon.vue';
 <style lang="scss" scoped>
 .lead {
   position: relative;
-  padding: 70px 120px 70px 130px;
-  margin-top: 15px;
+  padding: 85px 120px 70px 130px;
 
   &__intro {
     margin-top: 400px;
@@ -61,7 +60,7 @@ import SvgIcon from './SvgIcon.vue';
 
   &__image {
     position: absolute;
-    top: 70px;
+    top: 85px;
     right: 120px;
     bottom: 70px;
     z-index: -1;
